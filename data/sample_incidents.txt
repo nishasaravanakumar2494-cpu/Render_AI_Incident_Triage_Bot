@@ -1,0 +1,108 @@
+Incident ID: INC001
+Date: 12/01/2024
+Service: B2B Travel Portal
+Error: 500 Internal Server Error
+Summary: B2B travel page returning 500 error after deployment.
+Root Cause: CORS policy misconfiguration blocking backend API calls.
+Fix Applied: Updated CORS configuration in API gateway and redeployed.
+Status: Resolved
+---
+
+Incident ID: INC002
+Date: 18/02/2024
+Service: Payments API
+Error: 502 Bad Gateway
+Summary: Payment transactions failing during peak hours.
+Root Cause: API rate limit exceeded at payment gateway.
+Fix Applied: Increased rate limit and implemented retry backoff.
+Status: Resolved
+---
+
+Incident ID: INC003
+Date: 05/03/2024
+Service: UPI Transfer
+Error: Duplicate Debit
+Summary: Customers debited twice during retry.
+Root Cause: Retry logic not idempotent.
+Fix Applied: Added idempotency key validation.
+Status: Resolved
+---
+
+Incident ID: INC004
+Date: 19/01/2024
+Service: Credit Card Processing
+Error: Card Authorization Failed due to SSL cert
+Summary: Multiple credit card transactions declined despite valid cards.
+Root Cause: Expired API certificate between gateway and acquiring bank.
+Fix Applied: Renewed SSL certificate and revalidated gateway handshake.
+Status: Resolved
+---
+
+Incident ID: INC005
+Date: 07/02/2025
+Service: UPI Payment Service
+Error: Duplicate Transaction
+Summary: Users debited twice when retrying failed UPI payments.
+Root Cause: Missing idempotency validation in transaction service.
+Fix Applied: Implemented idempotency key check and duplicate prevention logic.
+Status: Resolved
+---
+
+Incident ID: INC006
+Date: 16/05/2025
+Service: Wallet Recharge
+Error: Transaction Pending
+Summary: Wallet balance not updated though amount debited from bank.
+Root Cause: Message queue delay in transaction confirmation service.
+Fix Applied: Reprocessed failed queue messages and optimized queue consumer.
+Status: Resolved
+---
+
+Incident ID: INC007
+Date: 02/03/2024
+Service: KYC Verification
+Error: 500 Internal Server Error
+Summary: KYC submission failing for new customers.
+Root Cause: Third-party verification API timeout.
+Fix Applied: Increased API timeout threshold and added retry mechanism.
+Status: Resolved
+---
+
+Incident ID: INC008
+Date: 12/03/2024
+Service: Transaction History API
+Error: Slow Response (>30s)
+Summary: Transaction history loading very slowly for high-volume users.
+Root Cause: Missing DB index on transaction_date column.
+Fix Applied: Added index and implemented pagination logic.
+Status: Resolved
+---
+
+Incident ID: INC009
+Date: 05/04/2024
+Service: Card Tokenization Service
+Error: Token Generation Failed
+Summary: New card token creation failing during checkout.
+Root Cause: Redis cache memory saturation.
+Fix Applied: Increased cache memory and enabled eviction policy.
+Status: Resolved
+---
+
+Incident ID: INC010
+Date: 02/02/2024
+Service: PeopleSoft Payroll Interface
+Error: Bank File Not Generated
+Summary: Payroll bank transfer file not generated for weekly run.
+Root Cause: Incorrect file path configured after server migration.
+Fix Applied: Updated process definition with correct output directory path.
+Status: Resolved
+---
+
+Incident ID: INC011
+Date: 14/02/2024
+Service: PeopleSoft Fintech Integration
+Error: Fintech Page Integration Broker Timeout
+Summary: Real-time payment confirmation messages delayed.
+Root Cause: Integration Broker queue backlog due to stuck service operation.
+Fix Applied: Cleared queue, reprocessed messages, and applied performance patch.
+Status: Resolved

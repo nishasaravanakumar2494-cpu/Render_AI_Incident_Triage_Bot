@@ -1,0 +1,9 @@
+streamlit 
+groq
+boto3
+langchain
+langchain-core
+langchain-community
+chromadb
+sentence-transformers
+dotenv
