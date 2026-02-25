@@ -1,9 +1,9 @@
-streamlit 
-groq
+streamlit
 boto3
 langchain
 langchain-core
 langchain-community
 chromadb
 sentence-transformers
-dotenv
+python-dotenv
+gunicorn
