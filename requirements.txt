@@ -1,8 +1,9 @@
-streamlit
-boto3
+streamlit   
 langchain
-langchain-openai
+langchain-api
 langchain-core
+langchain-chroma
+langchain-huggingface
 langchain-community
 chromadb
 sentence-transformers
