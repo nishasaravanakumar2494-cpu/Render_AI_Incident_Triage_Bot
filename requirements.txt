@@ -1,6 +1,5 @@
 streamlit   
 langchain
-langchain-api
 langchain-core
 langchain-chroma
 langchain-huggingface
